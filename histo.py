@@ -228,7 +228,7 @@ def matching_by_file(args):
     histogram_path = fileSearch(histogram_file, search)
 
     try:
-        img = cv.imread(img_path, 0)
+        img = cv.imread(img_path, cv.IMREAD_GRAYSCALE)
     except cv.error as err:
         print(err)
         sys.exit(1)
